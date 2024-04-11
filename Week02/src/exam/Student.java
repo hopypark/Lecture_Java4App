@@ -1,4 +1,4 @@
-package week02;
+package exam;
 
 public class Student {
 	int studentID;		// 학번

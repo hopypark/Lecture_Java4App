@@ -1,4 +1,4 @@
-package week02;
+package exam;
 
 //일어나서 학교가기 프로그램
 public class ProcedureOrientedProgrammingExam {

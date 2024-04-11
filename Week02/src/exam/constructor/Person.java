@@ -1,4 +1,4 @@
-package week02.constructor;
+package exam.constructor;
 
 public class Person {
 	String name;		// 이름
