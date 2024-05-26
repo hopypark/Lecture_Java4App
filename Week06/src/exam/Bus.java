@@ -4,6 +4,7 @@ public class Bus {
 	int busNumber;
 	int passengerCount;
 	int fare;
+	final static int FARE = 1_000;
 	
 	public Bus(int busNumber) {
 		this.busNumber = busNumber;
@@ -11,19 +12,19 @@ public class Bus {
 
 	public int take(int money) throws InsufficientBalanceException {
 		if (isTakePossible(money)) throw new InsufficientBalanceException();
-		else {
-			postTake(); // 
-			return money - 1000;
+		else {			
+			return postTake(money); // 버스 요금을 뺀 금액을 돌려준다.
 		}
 	}
 	
-	private void postTake() {
-		this.fare += 1000;
-		this.passengerCount++;		
+	private int postTake(int money) {
+		this.fare += Bus.FARE;
+		this.passengerCount++;
+		return money - Bus.FARE;
 	}
 	
 	private boolean isTakePossible(int money) {
-		if (money < 1000) return true;
+		if (money < Bus.FARE) return true;
 		else return false;
 	}
 	
