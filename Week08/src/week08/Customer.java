@@ -24,7 +24,7 @@ public class Customer {
 	}
 		
 	public int calcPrice(int price) {
-		this.bonusPoint = this.bonusPoint + (int)(this.bonusPoint * this.bonusRatio);
+		this.bonusPoint = this.bonusPoint + (int)(price * this.bonusRatio);
 		return price;
 	}
 
